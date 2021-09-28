@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.constraints.Null;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity //Gera uma tabela no banco
@@ -20,11 +20,11 @@ public class Postagem {
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // auto_increment
 	private long id;
 	
-	@Null(message = "O atributo titulo é obbrogatório!") 
+	@NotNull(message = "O atributo titulo é obbrogatório!") 
 	@Size(min = 5, max = 100,  message = "O atributo título deve ter no minimo 10 e no max 1000 caracteres!") // decide o tamanho minimo e maximo do atributo
 	private String titulo;
 	
-	@Null(message = "O atributo texto é obbrogatório!")
+	@NotNull(message = "O atributo texto é obbrogatório!")
 	@Size(min = 10, max = 1000,  message = "O atributo título deve ter no minimo 5 e no max 100 caracteres!")
 	private String texto;
 	
