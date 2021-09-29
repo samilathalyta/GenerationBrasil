@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.http.ResponseEntity.BodyBuilder;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.org.generation.blogpessoal.repository.Postagem;
+import br.org.generation.blogpessoal.model.Postagem;
 import br.org.generation.blogpessoal.repository.PostagemRepository;
 
 	
@@ -52,8 +51,8 @@ public ResponseEntity<Postagem> postPostagem (@RequestBody Postagem postagem){
 }
 
 @PutMapping
-public ResponseEntity <Postagem> putPostagem (@RequestBody Postagem postagem){
-	return ((BodyBuilder) ResponseEntity.ok(HttpStatus.OK)).body(postagemRepository.save(postagem));
+public ResponseEntity<Postagem> putPostagem (@RequestBody Postagem postagem){
+	return ResponseEntity.status(HttpStatus.OK).body(postagemRepository.save(postagem));
 }
 @DeleteMapping("/{id}")
 public void deletePostagem (@PathVariable long id) {
