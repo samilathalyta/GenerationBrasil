@@ -32,6 +32,9 @@ public class Categoria {
 	@Temporal(TemporalType.TIME) //tipo e tipo timestemp / timestamp não precisa passa dados. pega sozinho
 	private Date data = new java.sql.Date(System.currentTimeMillis()) ;
 	
+	
+	
+	
 	public Date getData() {
 		return data;
 	}
