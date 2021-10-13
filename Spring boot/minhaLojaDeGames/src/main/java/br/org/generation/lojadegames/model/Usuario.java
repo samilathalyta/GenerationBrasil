@@ -20,6 +20,20 @@ public class Usuario {
 	@Size(min = 2, max = 100,  message = "O atributo título deve ter no minimo 10 e no max 1000 caracteres!")
 	private String nome;
 	
+	
+	
+	
+	public Usuario(long id, String nome, String usuario, String senha) {
+		this.id = id;
+		this.nome = nome;
+		this.usuario = usuario;
+		this.senha = senha;
+	}
+	
+	public Usuario() {
+		
+	}
+
 	public long getId() {
 		return id;
 	}

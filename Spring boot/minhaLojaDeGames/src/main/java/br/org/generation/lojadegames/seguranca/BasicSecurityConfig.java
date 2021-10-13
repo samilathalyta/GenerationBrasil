@@ -1,4 +1,4 @@
-package br.org.generation.lojadegames.security;
+package br.org.generation.lojadegames.seguranca;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
