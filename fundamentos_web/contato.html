@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Contato</title>
     
 </head>
 <body>
     
-    <ul>
+    <ul id="menu">
         <li>
             <a href="index.html"> Home</a> 
         </li>
@@ -17,44 +18,55 @@
             <a href="contato.html"> Contato</a>
         </li>
     </ul>
-    <h1 style="margin-left: 22%;"">Entre em contato comigo!</h1>
+    <hr>
+    <h1 class="container">Entre em contato comigo!</h1>
 
-    <form style="margin: 0 auto; width: 400px; padding: 1em;border: 1px solid #CCC;
- border-radius: 1em; ">
-        <label for="nome">Nome: </label>
-        <input type="text" id="nome">
+    <div id="form" class="container ">
+    <form >
+        <label  for="nome ">Nome: </label>
+        <input  type="text" id="nome" onkeyup="validaNome()">
+        <div id="txtNome"></div>
         <br>
         <br>
         <label for="email" >Email: </label>
-        <input type="email" id="email" size="35">
+        <input ype="email" id="email" onkeyup="validaEmail()">
+        <div id="txtEmail"></div>
         <br>
         <br>
-        <label for="assunto">Assunto: </label>
-        <textarea name="assunto" id="assunto" cols="30" rows="10"></textarea>
+        <label for="assunto"  >Assunto: </label>
+        <textarea   name="assunto" id="assunto" onkeyup="validaAssunto()" cols="30" rows="10"></textarea>
+        <div id="txtAssunto"></div>
         <br>
         <br>
-        <button style="margin-left: 35%;">Enviar</button>
+        <button onclick="enviar()" style="margin-left: 35%;">Enviar</button>
         
     </form>
-        <h2>Endereço</h2>
-
-        <p>Av Paulista, 1000 - SP</p>
-        <p>CEP: 2315131</p>
-
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0980318204333!2d-46.6519376!3d-23.5649224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5994f2e15a7d%3A0xdeb92126793e5e90!2sAv.%20Paulista%2C%201000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-100!5e0!3m2!1spt-BR!2sbr!4v1634747215251!5m2!1spt-BR!2sbr" width="250" height="250" style="border: 50px;;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
        
-        <footer style="position:relative;
-        bottom: 0;
-        background-color: rgb(255, 0, 13);
-        color: #FFF;
-        width: 100%;
-        height: 100px;    
-        text-align: center;
-        line-height: 100px;">
-
-<p> & copy; 2021 cactha.com </p>      
-<a><img src="assets/img/github.png" width="60" height="40"  ></a>   
-        </footer>
+<div  class="container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0980318204333!2d-46.6519376!3d-23.5649224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5994f2e15a7d%3A0xdeb92126793e5e90!2sAv.%20Paulista%2C%201000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-100!5e0!3m2!1spt-BR!2sbr!4v1634747215251!5m2!1spt-BR!2sbr" width="250" height="250" style="border: 50px;;" allowfullscreen="" loading="lazy " id="mapa" onmousemove="mapaZoom()" onmouseout="mapaNormal()">
+            </iframe>
+            </div>
+       <hr>
+        <footer>
+            <div class="container" >
+                <a href="https://github.com/samilathalyta">
+                    <img class="tm " src="assets/img/github.png" alt="logo do github" > 
+                </a>
+                <a href="mailto:samila.thalytaa@gmail.com">
+                <img class="tm" src="assets/img/email.png" alt="logo do email" > 
+                </a>
+                <a href="https://www.linkedin.com/in/thalyta-c-b06850a3/">
+                <img class="tm mar" src="assets/img/linkedin.png" alt="logo do github" > 
+            </a> 
+            </div>  
+            <p class="container"> &copy; 2021 cactha.com </p> 
+            
+<p>Endereço: <br> Av Ficti, 1000 - SP <br> CEP: 2315131</p>
+        
+            
+                </footer>
+                <script src="assets/js/script.js"></script>
 </body>
 
   
